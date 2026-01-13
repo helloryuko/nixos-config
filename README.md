@@ -1,6 +1,8 @@
 ## Sophie's NixOS flake
 <a href="https://ibb.co/LXfqszx7"><img src="https://i.ibb.co/gLCXcMSK/image-2026-01-08-14-56-26.png" alt="image-2026-01-08-14-56-26" border="0"></a>
+
 This flake is intended to act as beginner-friendly learning source - it is well-commented and does not suffer from "folder hell"
+
 Though it is very simple, I actually daily-drive it.
 
 ## Setup
@@ -15,7 +17,7 @@ Though it is very simple, I actually daily-drive it.
 
 ## How to install
 1. Copy `hardware-configuration.nix` from your NixOS config to `./machine-specific`
-2. Change your desired username in `./home/users.nix`
+2. Change the username in `./home/users.nix`
 3. Run `sudo nixos-rebuild switch --flake .#base`
 
 ## How to use
