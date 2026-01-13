@@ -23,6 +23,12 @@ in
     sway-contrib.grimshot
   ];
 
+  # Screencasting
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+  };
+
   # stylix.targets.sway.enable = false;
 
   wayland.windowManager.sway = {
