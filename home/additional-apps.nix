@@ -37,6 +37,8 @@ in
     transmission_4-qt
     osu-lazer-bin
 
+    kdePackages.qtdeclarative
+
     # Minecraft launcher
     (prismlauncher.override {
       jdks = [

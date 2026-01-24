@@ -22,8 +22,9 @@ in
       ./sway.nix
       ./fastfetch.nix
       ./fuzzel.nix
-      ./waybar.nix
+      # ./waybar.nix
       ./zed.nix
+      ./quickshell.nix
       ./additional-apps.nix # Comment this out if you don't want none of my bloat
     ];
 
