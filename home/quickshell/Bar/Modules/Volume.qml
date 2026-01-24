@@ -15,7 +15,7 @@ StyledText {
     const pre = Prefixer.create("Volume");
 
     if (!sink || !sink.ready)
-      return pre("...");
+      return pre("....%");
     if (sink.audio.muted)
       return pre("muted");
 
