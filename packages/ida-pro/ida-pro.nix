@@ -78,7 +78,7 @@ pkgs.stdenv.mkDerivation rec {
   ];
   buildInputs = runtimeDependencies;
 
-  dontWrapQtApps = true;
+  warn = if builtins.pathExists ./these_bitches_change_up_like_the_season.py then [] else builtins.trace "Secret python script not found ${toString ./.}... @_@" [];
 
   installPhase = ''
     runHook preInstall
