@@ -6,6 +6,24 @@ let
   shouldUse = osConfig.networking.hostName == "laptop";
 in
 {
+  programs.obs-studio = {
+    enable = true;
+
+    package = (
+      pkgs.obs-studio.override {
+        cudaSupport = true;
+      }
+    );
+
+    plugins = with pkgs.obs-studio-plugins; [
+      wlrobs
+      obs-pipewire-audio-capture
+      obs-vaapi
+      obs-gstreamer
+      obs-vkcapture
+    ];
+  };
+
   home.packages = lib.mkIf shouldUse (with pkgs; [
     gh
     android-tools
