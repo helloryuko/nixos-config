@@ -36,6 +36,7 @@
           ./desktop/nix-config.nix
 
           ./desktop/bootloader.nix
+          ./desktop/power.nix
           ./desktop/bluetooth.nix
           ./desktop/network.nix
           ./desktop/display.nix
@@ -73,6 +74,7 @@
           ./machine-specific/nvidia.nix
           ./machine-specific/keyboard-udev.nix
           ./machine-specific/sound-latency.nix
+          ./machine-specific/power-management.nix
           # ./machine-specific/kernel-tweaks.nix
         ];
       };
