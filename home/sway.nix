@@ -23,27 +23,6 @@ in
     sway-contrib.grimshot
   ];
 
-  # Screencasting
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [ xdg-desktop-portal-wlr ];
-
-    # https://github.com/NixOS/nixpkgs/blob/6df2f671f1eca65dce7c78e547b44b0f60ca10de/nixos/modules/programs/wayland/sway.nix
-    config.sway = {
-      # Use xdg-desktop-portal-gtk for every portal interface...
-      default = [ "gtk" ];
-      # ... except for the ScreenCast, Screenshot and Secret
-      "org.freedesktop.impl.portal.ScreenCast" = "wlr";
-      "org.freedesktop.impl.portal.Screenshot" = "wlr";
-      # ignore inhibit bc gtk portal always returns as success,
-      # despite sway/the wlr portal not having an implementation,
-      # stopping firefox from using wayland idle-inhibit
-      "org.freedesktop.impl.portal.Inhibit" = "none";
-    };
-  };
-
-  # stylix.targets.sway.enable = false;
-
   wayland.windowManager.sway = {
     enable = true;
     xwayland = true;
@@ -163,4 +142,24 @@ in
       bars = [];
     };
   };
+
+  # Screencasting
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [ xdg-desktop-portal-wlr ];
+
+    # https://github.com/NixOS/nixpkgs/blob/6df2f671f1eca65dce7c78e547b44b0f60ca10de/nixos/modules/programs/wayland/sway.nix
+    config.sway = {
+      # Use xdg-desktop-portal-gtk for every portal interface...
+      default = [ "gtk" ];
+      # ... except for the ScreenCast, Screenshot and Secret
+      "org.freedesktop.impl.portal.ScreenCast" = "wlr";
+      "org.freedesktop.impl.portal.Screenshot" = "wlr";
+      # ignore inhibit bc gtk portal always returns as success,
+      # despite sway/the wlr portal not having an implementation,
+      # stopping firefox from using wayland idle-inhibit
+      "org.freedesktop.impl.portal.Inhibit" = "none";
+    };
+  };
+
 }
