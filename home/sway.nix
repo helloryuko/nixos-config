@@ -23,6 +23,8 @@ in
     sway-contrib.grimshot
   ];
 
+  stylix.targets.sway.enable = false;
+
   wayland.windowManager.sway = {
     enable = true;
     xwayland = true;
@@ -122,20 +124,39 @@ in
       # why we need to use `lib.mkForce`.
       colors = {
         focused = {
-          border = lib.mkForce "#ffffff";
-          indicator = lib.mkForce "#ffffff";
+          background = "#18191b";
+          border = "#ffffff";
+          childBorder = "#ffffff";
+          indicator = "#ffffff";
+          text = "#e0e1e4";
         };
         focusedInactive = {
-          border = lib.mkForce "#ffffff";
-          indicator = lib.mkForce "#ffffff";
+          background = "#18191b";
+          border = "#ffffff";
+          childBorder = "#ffffff";
+          indicator = "#ffffff";
+          text = "#e0e1e4";
         };
         unfocused = {
-          border = lib.mkForce "#ffffff00";
-          indicator = lib.mkForce "#ffffff00";
+          background = "#18191b";
+          border = "#ffffff00";
+          childBorder = "#ffffff00";
+          indicator = "#ffffff00";
+          text = "#e0e1e4";
         };
         placeholder = {
-          border = lib.mkForce "#ffffff";
-          indicator = lib.mkForce "#ffffff";
+          background = "#18191b";
+          border = "#ffffff";
+          childBorder = "#ffffff";
+          indicator = "#ffffff";
+          text = "#e0e1e4";
+        };
+        urgent = {
+          background = "#18191b";
+          border = "#eb4056";
+          childBorder = "#eb4056";
+          indicator = "#eb4056";
+          text = "#e0e1e4";
         };
       };
 
