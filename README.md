@@ -1,5 +1,5 @@
 ## Sophie's NixOS flake
-<a href="https://ibb.co/LXfqszx7"><img src="https://i.ibb.co/gLCXcMSK/image-2026-01-08-14-56-26.png" alt="image-2026-01-08-14-56-26" border="0"></a>
+<a href="https://ibb.co/bjGGKqDX"><img src="https://i.ibb.co/spXXVkzq/image.png" alt="image" border="0"></a>
 
 This flake is intended to act as beginner-friendly learning source - it is well-commented and does not suffer from "folder hell"
 
