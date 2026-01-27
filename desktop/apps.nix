@@ -13,6 +13,8 @@
   # CLI tools that will be available for any user.
   environment.systemPackages = with pkgs; [
     neovim
+    python3
+    bun
     wget
     curl
     git
