@@ -33,6 +33,8 @@ in
     steam
 
     ida-pro
+    binaryninja
+
     telegram-desktop
     vesktop
     spotify

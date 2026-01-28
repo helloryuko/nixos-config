@@ -1,7 +1,7 @@
 # Sophie: adapted from https://github.com/msanft/ida-pro-overlay, an MIT-licensed project.
 # Included as an example on how to package your own flake and include it in your system.
 {
-  description = "Nix flake for IDA Pro";
+  description = "Nix flake for Binary Ninja Personal";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
@@ -21,8 +21,8 @@
     {
       overlays.default = self: super: {
         # use super here to inherit allowUnfree status
-        ida-pro = super.callPackage ./ida-pro.nix {};
+        binaryninja = super.callPackage ./binaryninja.nix {};
       };
-      packages.${system}.ida-pro = pkgs.callPackage ./ida-pro.nix {};
+      packages.${system}.binaryninja = pkgs.callPackage ./binaryninja.nix {};
     };
 }

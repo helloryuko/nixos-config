@@ -15,6 +15,7 @@
     home-manager = { url = "github:nix-community/home-manager"; inputs.nixpkgs.follows = "nixpkgs"; };
     stylix = { url = "github:nix-community/stylix"; inputs.nixpkgs.follows = "nixpkgs"; };
     ida-pro = { url = "path:./packages/ida-pro"; inputs.nixpkgs.follows = "nixpkgs"; };
+    binaryninja = { url = "path:./packages/binaryninja"; inputs.nixpkgs.follows = "nixpkgs"; };
   };
 
   nixConfig = {
